@@ -4,7 +4,7 @@ import menu from "../assets/images//menu.svg";
 
 const Navber = () => {
   return (
-    <div className="fixed flex items-center h-[90px] shadow-lg w-full py-[20px] px-[30px]">
+    <div className="fixed flex items-center h-[90px] shadow-lg w-full py-[20px] px-[30px] bg-white">
       <div className="flex items-center gap-[10px] w-[200px]">
         <img className="w-[30px]" src={menu} alt="" />
         <h2>Menu</h2>
