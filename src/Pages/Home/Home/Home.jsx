@@ -1,9 +1,14 @@
 import React from "react";
+import Navber from "../../../Navber/Navber";
 
 const Home = () => {
   return (
     <div>
-      <h2>Home</h2>
+      <Navber />
+      {/* Home content */}
+      <div className="pt-[80px]">
+        <h2>Home content</h2>
+      </div>
     </div>
   );
 };
