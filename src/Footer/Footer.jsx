@@ -8,7 +8,7 @@ import likedin from "../assets/images/linkedin.svg";
 const Footer = () => {
   return (
     <div className="bg-[#323232] text-white py-[20px]  ">
-      <div className="max-w-[1200px] mx-auto h-[150px] flex flex-col lg:flex-row justify-center lg:justify-between items-center">
+      <div className="max-w-[890px] mx-auto h-[150px] flex flex-col lg:flex-row justify-center lg:justify-between items-center">
         <div className="flex">
           <div className=" border-r-[2px] text-right pr-[15px]">
             <img className="w-[170px]" src={footer_logo} alt="" />
@@ -25,10 +25,10 @@ const Footer = () => {
           </div>
         </div>
         <div className="flex gap-[20px] mt-[20px] lg:mt-[0px]">
-          <img className="w-[30px] h-[30px]" src={email} alt="" />
-          <img className="w-[30px] h-[30px]" src={facebook} alt="" />
-          <img className="w-[30px] h-[30px]" src={twitter} alt="" />
-          <img className="w-[30px] h-[30px]" src={likedin} alt="" />
+          <img className="w-[25px] h-[25px]" src={email} alt="" />
+          <img className="w-[25px] h-[25px]" src={facebook} alt="" />
+          <img className="w-[25px] h-[25px]" src={twitter} alt="" />
+          <img className="w-[25px] h-[25px]" src={likedin} alt="" />
         </div>
       </div>
     </div>
