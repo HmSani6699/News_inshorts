@@ -1,18 +1,12 @@
 import React from "react";
-import logo from "../assets/images/logo_footer.png";
-import { Link } from "react-router-dom";
+import { FaUserAlt } from "react-icons/fa";
 
 const AdminNavber = () => {
   return (
-    <div className="pt-[20px]">
-      <div className="pl-[20px]">
-        <img className="w-[170px]" src={logo} alt="" />
-      </div>
-      {/* Navn list  */}
-      <div className=" mt-[50px]">
-        <Link className="block bg-white py-[12px] pl-[20px]" to="/addPost">
-          Add Post
-        </Link>
+    <div className="py-[12px] px-[20px] flex items-center justify-between w-full border-b border-b-gray-500 ">
+      <h2 className="text-[27px] font-bold text-[#1d5276]">Welcome to Admin</h2>
+      <div className="h-[45px] w-[45px] flex items-center justify-center rounded-full border border-[#000]">
+        <FaUserAlt className="text-[25px]" />
       </div>
     </div>
   );

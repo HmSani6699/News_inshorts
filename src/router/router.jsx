@@ -3,8 +3,8 @@ import Main from "../Layout/Main";
 import Mobile from "../Mobile/Mobile";
 import Home from "../Pages/Home/Home/Home";
 import AdminLayout from "../Layout/AdminLayout";
-import Admin from "../Pages/Admin/Admin";
 import AddPost from "../Pages/Admin/AddPost";
+import Dashoboard from "../Pages/Admin/Dashoboard";
 
 const router = createBrowserRouter([
   {
@@ -26,8 +26,8 @@ const router = createBrowserRouter([
     element: <AdminLayout />,
     children: [
       {
-        path: "/admin",
-        element: <Admin />,
+        path: "dashboard",
+        element: <Dashoboard />,
       },
       {
         path: "addPost",
