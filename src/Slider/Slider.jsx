@@ -9,67 +9,53 @@ import NearMeIcon from "@material-ui/icons/NearMe";
 import "./Slider.css";
 
 import cartImg from "../../src/assets/images/cart_img.jpg";
+import { GoLock } from "react-icons/go";
 
-const Slider = ({
-  id,
-  src,
-  channel,
-  description,
-  like,
-  dislike,
-  share,
-  comment,
-}) => {
-  const [playing, setPlaying] = useState(false);
+const Slider = ({ description, like, dislike, share, comment }) => {
   const [subs, setSubs] = useState(false);
-
-  //   const videoRef = useRef(null);
-  //   const handleVideoPress = () => {
-  //     if (playing) {
-  //       setPlaying(false);
-  //       videoRef.current.pause();
-  //     } else {
-  //       videoRef.current.play();
-  //       setPlaying((play) => !play);
-  //     }
-  //   };
 
   const handleSubscribe = () => {
     setSubs((sub) => !sub);
   };
   return (
-    <div className="video ">
-      {/* <video
-        id={id}
-        className="video__player"
-        onClick={handleVideoPress}
-        loop
-        ref={videoRef}
-        src={src}
-      /> */}
-
-      <div className="flex justify-center items-center h-full w-full">
-        <img className="" src={cartImg} alt="" />
+    <div className="slider-container rounded-t-[15px]">
+      <div className=" h-[250px]  w-full">
+        <img className="rounded-t-[15px] h-full" src={cartImg} alt="" />
+      </div>
+      <div className="px-[10px]">
+        <h2 className="text-[#ffff] text-[22px] my-[10px] font-[300]">
+          Inshorts featured in Google's Best Apps of 2015
+        </h2>
+        <p className="text-[#ffff] text-[12px] lg:text-[16px]">
+          <span className="text-[#ffff] text-[12px] font-semibold">short</span>
+          Kabir Khan / 10:52 pm on Saturday, 5 December, 2015
+        </p>
+        <p className="text-white pt-[15px] text-[15px]">
+          News aggregator app Inshorts has featured in the Google Play Store's
+          'Best Apps of 2015' list. The list features Google's selection of 50
+          mobile applications across apps, games and entertainment categories in
+          the Play Store. Available on both Android and iOS, Inshorts offers
+          stories summarised in 60 words or less for quick consumption.
+        </p>
       </div>
 
       <div className="shortsContainer">
-        <div className="shortsVideoTop">
-          <div className="shortsVideoTopIcon">
-            <ArrowBackIcon />
-          </div>
-          <div className="shortsVideoTopIcon">
-            <MoreVertIcon />
-          </div>
-        </div>
         <div className="shortsVideoSideIcons">
           <div className="shortsVideoSideIcon">
             <ThumbUpIcon />
             <p>{like}</p>
           </div>
-          <div className="shortsVideoSideIcon">
+          {/* <div className="h-[35px] w-[35px] cursor-pointer shadow-md hover:bg-red-400 bg-white flex items-center justify-center rounded-full has-tooltip">
+            <GoLock className="hover:text-white" />
+            <span className="tooltip relative shadow-lg p-[5px] bg-[#383838] text-white -ml-[140px]  whitespace-nowrap text-[13px] ">
+              <p className="relative z-[2]">Add to Cart</p>
+              <div className="bg-[#383838] p-[7px]  rotate-[135deg] absolute top-[8px] -right-[4px]"></div>
+            </span>
+          </div> */}
+          {/* <div className="shortsVideoSideIcon">
             <ThumbDownIcon />
             <p>{dislike}</p>
-          </div>
+          </div> */}
           <div className="shortsVideoSideIcon">
             <InsertCommentIcon />
             <p>{comment}</p>
@@ -80,16 +66,8 @@ const Slider = ({
             <p>{share}</p>
           </div>
         </div>
-        <div className="shortsBottom">
-          <div className="shortsDesc">
-            {/* <Ticker mode="smooth">
-              {({ index }) => (
-                <>
-                  <p className="description">{description}</p>
-                </>
-              )}
-            </Ticker> */}
-          </div>
+        {/* <div className="shortsBottom">
+
           <div className="shortDetails">
             <Avatar
               src={
@@ -106,7 +84,7 @@ const Slider = ({
               {subs ? "SUBSCRIBED" : "SUBSCRIBE"}
             </button>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
