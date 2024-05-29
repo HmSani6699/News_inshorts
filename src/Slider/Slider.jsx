@@ -9,7 +9,10 @@ import NearMeIcon from "@material-ui/icons/NearMe";
 import "./Slider.css";
 
 import cartImg from "../../src/assets/images/cart_img.jpg";
-import { GoLock } from "react-icons/go";
+import { BiLike } from "react-icons/bi";
+import { FaRegComment } from "react-icons/fa6";
+import { MdOutlineRemoveRedEye } from "react-icons/md";
+import { PiShareFatBold } from "react-icons/pi";
 
 const Slider = ({ description, like, dislike, share, comment }) => {
   const [subs, setSubs] = useState(false);
@@ -18,9 +21,9 @@ const Slider = ({ description, like, dislike, share, comment }) => {
     setSubs((sub) => !sub);
   };
   return (
-    <div className="slider-container rounded-t-[15px]">
+    <div className="slider-container rounded-[15px]">
       <div className=" h-[250px]  w-full">
-        <img className="rounded-t-[15px] h-full" src={cartImg} alt="" />
+        <img className="rounded-t-[15px] h-full w-full" src={cartImg} alt="" />
       </div>
       <div className="px-[10px]">
         <h2 className="text-[#ffff] text-[22px] my-[10px] font-[300]">
@@ -39,24 +42,30 @@ const Slider = ({ description, like, dislike, share, comment }) => {
         </p>
       </div>
 
+      <div className="  absolute bottom-0 mb-[10px] w-full ">
+        <div className=" flex justify-center mb-[10px]">
+          <div className="border border-[#a8abafb3]  w-[95%]"></div>
+        </div>
+        <div className="flex justify-around">
+          <BiLike className="text-[25px] text-[#a8abaf]" />
+          <MdOutlineRemoveRedEye className="text-[28px] text-[#a8abaf]" />
+          <FaRegComment className="text-[25px] text-[#a8abaf]" />
+          <PiShareFatBold className="text-[25px] text-[#a8abaf]" />
+        </div>
+      </div>
+
       <div className="shortsContainer">
         <div className="shortsVideoSideIcons">
-          <div className="shortsVideoSideIcon">
+          {/* <div className="shortsVideoSideIcon">
             <ThumbUpIcon />
             <p>{like}</p>
-          </div>
-          {/* <div className="h-[35px] w-[35px] cursor-pointer shadow-md hover:bg-red-400 bg-white flex items-center justify-center rounded-full has-tooltip">
-            <GoLock className="hover:text-white" />
-            <span className="tooltip relative shadow-lg p-[5px] bg-[#383838] text-white -ml-[140px]  whitespace-nowrap text-[13px] ">
-              <p className="relative z-[2]">Add to Cart</p>
-              <div className="bg-[#383838] p-[7px]  rotate-[135deg] absolute top-[8px] -right-[4px]"></div>
-            </span>
           </div> */}
+
           {/* <div className="shortsVideoSideIcon">
             <ThumbDownIcon />
             <p>{dislike}</p>
           </div> */}
-          <div className="shortsVideoSideIcon">
+          {/* <div className="shortsVideoSideIcon">
             <InsertCommentIcon />
             <p>{comment}</p>
           </div>
@@ -64,7 +73,7 @@ const Slider = ({ description, like, dislike, share, comment }) => {
           <div className="shortsVideoSideIcon">
             <NearMeIcon />
             <p>{share}</p>
-          </div>
+          </div> */}
         </div>
         {/* <div className="shortsBottom">
 
