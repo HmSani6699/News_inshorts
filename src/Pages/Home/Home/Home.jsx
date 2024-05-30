@@ -45,19 +45,19 @@
 // export default Home;
 
 import React from "react";
-import Navber from "../../../Navber/Navber";
 import appStore from "../../../assets/images/appstore.png";
 import playStore from "../../../assets/images/playstore.png";
 import Cart from "../../../component/Cart";
 import Footer from "../../../Footer/Footer";
 import { Box, Container, Typography, Button, Grid } from "@mui/material";
+import Navbar from "../../../Navber/Navbar";
 
 const Home = () => {
   const allCart = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
   return (
     <Box>
-      <Navber />
+      <Navbar />
       {/* Home app and play store content */}
       <Box pt={14}>
         <Container

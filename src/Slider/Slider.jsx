@@ -1,11 +1,11 @@
 import React, { useRef, useState } from "react";
-import { Avatar } from "@material-ui/core";
-import ArrowBackIcon from "@material-ui/icons/ArrowBack";
-import MoreVertIcon from "@material-ui/icons/MoreVert";
-import ThumbUpIcon from "@material-ui/icons/ThumbUp";
-import ThumbDownIcon from "@material-ui/icons/ThumbDown";
-import InsertCommentIcon from "@material-ui/icons/InsertComment";
-import NearMeIcon from "@material-ui/icons/NearMe";
+// import { Avatar } from "@material-ui/core";
+// import ArrowBackIcon from "@material-ui/icons/ArrowBack";
+// import MoreVertIcon from "@material-ui/icons/MoreVert";
+// import ThumbUpIcon from "@material-ui/icons/ThumbUp";
+// import ThumbDownIcon from "@material-ui/icons/ThumbDown";
+// import InsertCommentIcon from "@material-ui/icons/InsertComment";
+// import NearMeIcon from "@material-ui/icons/NearMe";
 import "./Slider.css";
 
 import cartImg from "../../src/assets/images/cart_img.jpg";
@@ -15,11 +15,6 @@ import { MdOutlineRemoveRedEye } from "react-icons/md";
 import { PiShareFatBold } from "react-icons/pi";
 
 const Slider = ({ description, like, dislike, share, comment }) => {
-  const [subs, setSubs] = useState(false);
-
-  const handleSubscribe = () => {
-    setSubs((sub) => !sub);
-  };
   return (
     <div className="slider-container rounded-[15px]">
       <div className=" h-[250px]  w-full">
