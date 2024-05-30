@@ -72,7 +72,7 @@ const Navbar = ({ toggleDrawer }) => {
               edge="start"
               color="inherit"
               aria-label="menu"
-              sx={{ mr: 2 }}
+              // sx={{ mr: 2 }}
             >
               <img
                 onClick={toggleDrawer(true)}
@@ -88,10 +88,9 @@ const Navbar = ({ toggleDrawer }) => {
             >
               {t("logo")}
             </Typography>
-            <Button color="inherit">Login</Button>
+            <Button sx={{ color: "black" }}>Login</Button>
             <FormControlLabel
               control={<MaterialUISwitch sx={{ m: 1 }} defaultChecked />}
-              label="MUI switch"
             />
           </Toolbar>
         </AppBar>

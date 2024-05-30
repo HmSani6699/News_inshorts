@@ -112,7 +112,7 @@ const SideNavbar = ({ toggleDrawer, open }) => {
   );
 
   return (
-    <div className="mt-[100px]">
+    <div>
       <Drawer open={open} onClose={toggleDrawer(false)}>
         {DrawerList}
       </Drawer>
