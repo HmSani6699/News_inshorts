@@ -1,0 +1,21 @@
+{
+  "logo": "News",
+  "app_title": "For the best experience use News on your smartphone",
+  "sidebar": {
+    "liat_1": "India",
+    "liat_2": "Business",
+    "liat_3": "Politics",
+    "liat_4": "Sports",
+    "liat_5": "Technology",
+    "liat_6": "Stratups",
+    "liat_7": "Entertainment",
+    "liat_8": "Hatke"
+  },
+  "footer": {
+    "company": "News Pte. Ltd.",
+    "copy_right": "© কপিরাইট 2024",
+    "contactUs": "Contact Us",
+    "terms": "Terms & conditions",
+    "privacy": "Privacy Policies"
+  }
+}

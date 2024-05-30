@@ -51,13 +51,23 @@ import Cart from "../../../component/Cart";
 import Footer from "../../../Footer/Footer";
 import { Box, Container, Typography, Button, Grid } from "@mui/material";
 import Navbar from "../../../Navber/Navbar";
+import SideNavebar from "../../../Navber/SideNavebar";
+import { useTranslation } from "react-i18next";
 
 const Home = () => {
+  const { t } = useTranslation();
   const allCart = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+  const [open, setOpen] = React.useState(false);
+
+  const toggleDrawer = (newOpen) => () => {
+    setOpen(newOpen);
+  };
 
   return (
     <Box>
-      <Navbar />
+      <Navbar toggleDrawer={toggleDrawer} />
+      <SideNavebar toggleDrawer={toggleDrawer} open={open} />
       {/* Home app and play store content */}
       <Box pt={14}>
         <Container
@@ -78,11 +88,7 @@ const Home = () => {
             align="center"
             sx={{ mb: { xs: 2, lg: 0 } }}
           >
-            For the best experience use
-            <Typography component="span" fontWeight="fontWeightBold">
-              Inshorts
-            </Typography>
-            app on your smartphone
+            {t("app_title")}
           </Typography>
           <Box
             display="flex"

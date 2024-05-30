@@ -1,13 +1,9 @@
-// import React from "react";
-import logo from "../assets/images/logo_inshorts.png";
+import { useTranslation } from "react-i18next";
 import menu from "../assets/images/menu.svg";
-
-// import { AppBar, Box, IconButton, Toolbar } from "@material-ui/core";
 import {
   AppBar,
   Box,
   Button,
-  Container,
   FormControlLabel,
   IconButton,
   Switch,
@@ -15,6 +11,8 @@ import {
   Typography,
   styled,
 } from "@mui/material";
+
+// Toggle Drag and Light Content
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 62,
   height: 34,
@@ -62,44 +60,10 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   },
 }));
 
-// const Navber = () => {
-//   return (
-//     <div className="fixed flex items-center h-[72px] shadow-lg w-full py-[20px] px-[30px] bg-white">
-//       <div className="flex items-center gap-[10px] w-[200px]">
-//         <img className="w-[30px]" src={menu} alt="" />
-//         <h2>Menu</h2>
-//       </div>
-//       <div className="flex  justify-center w-full">
-//         <img className="h-[56px] lg:-ml-[200px]" src={logo} alt="" />
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Navber;
-
-// import AppBar from "@mui/material/AppBar";
-// import Box from "@mui/material/Box";
-// import Toolbar from "@mui/material/Toolbar";
-// import Typography from "@mui/material/Typography";
-// import Button from "@mui/material/Button";
-// import IconButton from "@mui/material/IconButton";
-// // import MenuIcon from "@mui/icons-material/Menu";
-// import MenuIcon from "@mui/icons-material/";
-
-const Navbar = () => {
+const Navbar = ({ toggleDrawer }) => {
+  const { t } = useTranslation();
   return (
     <>
-      {/* <div className="fixed flex items-center h-[72px] shadow-lg w-full py-[20px] px-[30px] bg-white">
-        <div className="flex items-center gap-[10px] w-[200px]">
-          <img className="w-[30px]" src={menu} alt="" />
-          <h2>Menu</h2>
-        </div>
-
-        <div className="flex  justify-center w-full">
-          <img className="h-[56px] lg:-ml-[200px]" src={logo} alt="" />
-        </div>
-      </div> */}
       <Box sx={{ flexGrow: 1, bgcolor: "#ffffff" }}>
         <AppBar sx={{ bgcolor: "#ffffff" }} position="fixed">
           <Toolbar>
@@ -110,14 +74,19 @@ const Navbar = () => {
               aria-label="menu"
               sx={{ mr: 2 }}
             >
-              <img className="w-[30px]" src={menu} alt="" />
+              <img
+                onClick={toggleDrawer(true)}
+                className="w-[30px]"
+                src={menu}
+                alt=""
+              />
             </IconButton>
             <Typography
               variant="h6"
               component="div"
               sx={{ flexGrow: 1, color: "black" }}
             >
-              News
+              {t("logo")}
             </Typography>
             <Button color="inherit">Login</Button>
             <FormControlLabel
