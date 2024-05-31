@@ -4,7 +4,15 @@ import DescriptionOutlinedIcon from "@mui/icons-material/DescriptionOutlined";
 import BookmarkBorderOutlinedIcon from "@mui/icons-material/BookmarkBorderOutlined";
 import RemoveRedEyeOutlinedIcon from "@mui/icons-material/RemoveRedEyeOutlined";
 import ShareIcon from "@mui/icons-material/Share";
-import { Box } from "@mui/material";
+import { Badge, Box, IconButton } from "@mui/material";
+import styled from "styled-components";
+
+const RedBadge = styled(Badge)(({ theme }) => ({
+  "& .MuiBadge-badge": {
+    backgroundColor: "#FF0000", // Custom red color
+    color: "#ffff", // Adjust the color as needed
+  },
+}));
 
 const Slider = () => {
   const description = ` News aggregator app Inshorts has featured in the Google Play Store's
@@ -47,56 +55,26 @@ const Slider = () => {
           <BookmarkBorderOutlinedIcon
             sx={{ color: "#828289", fontSize: "27px" }}
           />
-          <DescriptionOutlinedIcon
-            sx={{ color: "#828289", fontSize: "25px" }}
-          />
-          <RemoveRedEyeOutlinedIcon
-            sx={{ color: "#828289", fontSize: "25px" }}
-          />
-          <ShareIcon sx={{ color: "#828289", fontSize: "25px" }} />
+          <IconButton aria-label="cart">
+            <RedBadge badgeContent={2}>
+              <DescriptionOutlinedIcon
+                sx={{ color: "#828289", fontSize: "25px" }}
+              />
+            </RedBadge>
+          </IconButton>
+          <IconButton aria-label="cart">
+            <RedBadge badgeContent={4}>
+              <RemoveRedEyeOutlinedIcon
+                sx={{ color: "#828289", fontSize: "25px" }}
+              />
+            </RedBadge>
+          </IconButton>
+          <IconButton aria-label="cart">
+            <RedBadge badgeContent={6}>
+              <ShareIcon sx={{ color: "#828289", fontSize: "25px" }} />
+            </RedBadge>
+          </IconButton>
         </Box>
-      </div>
-
-      <div className="shortsContainer">
-        <div className="shortsVideoSideIcons">
-          {/* <div className="shortsVideoSideIcon">
-            <ThumbUpIcon />
-            <p>{like}</p>
-          </div> */}
-
-          {/* <div className="shortsVideoSideIcon">
-            <ThumbDownIcon />
-            <p>{dislike}</p>
-          </div> */}
-          {/* <div className="shortsVideoSideIcon">
-            <InsertCommentIcon />
-            <p>{comment}</p>
-          </div>
-
-          <div className="shortsVideoSideIcon">
-            <NearMeIcon />
-            <p>{share}</p>
-          </div> */}
-        </div>
-        {/* <div className="shortsBottom">
-
-          <div className="shortDetails">
-            <Avatar
-              src={
-                "https://lh3.googleusercontent.com/ogw/ADGmqu8BCzU8GejYorGqXeu98A1kfEFYKFT85I3_9KJBzfw=s32-c-mo"
-              }
-            />
-            <p>{channel}</p>
-            <button
-              style={{
-                background: subs ? "red" : "hsla(0,0%,69.4%,.609)",
-              }}
-              onClick={handleSubscribe}
-            >
-              {subs ? "SUBSCRIBED" : "SUBSCRIBE"}
-            </button>
-          </div>
-        </div> */}
       </div>
     </div>
   );

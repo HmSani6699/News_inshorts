@@ -56,6 +56,9 @@ import { useTranslation } from "react-i18next";
 
 const Home = () => {
   const { t } = useTranslation();
+  const textColor = getComputedStyle(document.documentElement).getPropertyValue(
+    "--text-color"
+  );
   const allCart = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
   const [open, setOpen] = React.useState(false);
@@ -113,7 +116,16 @@ const Home = () => {
       </Container>
 
       <Box display="flex" justifyContent="center" my={6}>
-        <Button variant="outlined" sx={{ py: 1, px: 5 }}>
+        <Button
+          variant="outlined"
+          sx={{
+            py: 1,
+            px: 5,
+            borderColor: "gray",
+            color: `${textColor}`,
+            outline: "none",
+          }}
+        >
           Load More
         </Button>
       </Box>
