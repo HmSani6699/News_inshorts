@@ -18,13 +18,23 @@ const SideNavbar = ({ toggleDrawer, open }) => {
   };
 
   const currentLanguage = i18n.language;
-  console.log("Current Language:", currentLanguage);
+
+  const textColor = getComputedStyle(document.documentElement).getPropertyValue(
+    "--text-color"
+  );
+  const bgColor = getComputedStyle(document.documentElement).getPropertyValue(
+    "--bg-color"
+  );
 
   const DrawerList = (
-    <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
+    <Box
+      sx={{ width: 250, height: "100%", bgcolor: `${bgColor}` }}
+      role="presentation"
+      onClick={toggleDrawer(false)}
+    >
       <Box display="flex" justifyContent="flex-end">
         <CloseIcon
-          sx={{ color: "black", paddingTop: "10px", fontSize: "35px" }}
+          sx={{ color: `${textColor}`, paddingTop: "10px", fontSize: "35px" }}
         />
       </Box>
       <Box
@@ -46,7 +56,7 @@ const SideNavbar = ({ toggleDrawer, open }) => {
           <Button
             onClick={() => changeLanguage("en")}
             sx={{
-              color: "black",
+              color: `${textColor}`,
               bgcolor: `${currentLanguage === "en" && "#808080b3"}`,
             }}
           >
@@ -55,7 +65,7 @@ const SideNavbar = ({ toggleDrawer, open }) => {
           <Button
             onClick={() => changeLanguage("bn")}
             sx={{
-              color: "black",
+              color: `${textColor}`,
               bgcolor: `${currentLanguage === "bn" && "#808080b3"}`,
             }}
           >
@@ -68,42 +78,42 @@ const SideNavbar = ({ toggleDrawer, open }) => {
         <List>
           <ListItem>
             <ListItemButton>
-              <p>{t(`sidebar.liat_1`)}</p>
+              <p className={`text-[${textColor}]`}>{t(`sidebar.liat_1`)}</p>
             </ListItemButton>
           </ListItem>
           <ListItem>
             <ListItemButton>
-              <p>{t(`sidebar.liat_2`)}</p>
+              <p className={`text-[${textColor}]`}>{t(`sidebar.liat_2`)}</p>
             </ListItemButton>
           </ListItem>
           <ListItem>
             <ListItemButton>
-              <p>{t(`sidebar.liat_3`)}</p>
+              <p className={`text-[${textColor}]`}>{t(`sidebar.liat_3`)}</p>
             </ListItemButton>
           </ListItem>
           <ListItem>
             <ListItemButton>
-              <p>{t(`sidebar.liat_4`)}</p>
+              <p className={`text-[${textColor}]`}>{t(`sidebar.liat_4`)}</p>
             </ListItemButton>
           </ListItem>
           <ListItem>
             <ListItemButton>
-              <p>{t(`sidebar.liat_5`)}</p>
+              <p className={`text-[${textColor}]`}>{t(`sidebar.liat_5`)}</p>
             </ListItemButton>
           </ListItem>
           <ListItem>
             <ListItemButton>
-              <p>{t(`sidebar.liat_6`)}</p>
+              <p className={`text-[${textColor}]`}>{t(`sidebar.liat_6`)}</p>
             </ListItemButton>
           </ListItem>
           <ListItem>
             <ListItemButton>
-              <p>{t(`sidebar.liat_7`)}</p>
+              <p className={`text-[${textColor}] `}>{t(`sidebar.liat_7`)}</p>
             </ListItemButton>
           </ListItem>
           <ListItem>
             <ListItemButton>
-              <p>{t(`sidebar.liat_8`)}</p>
+              <p className={`text-[${textColor}]`}>{t(`sidebar.liat_8`)}</p>
             </ListItemButton>
           </ListItem>
         </List>
