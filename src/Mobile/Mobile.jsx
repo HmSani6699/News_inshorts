@@ -5,7 +5,7 @@ import Slider from "../Slider/Slider";
 const Mobile = () => {
   return (
     <div className="app">
-      <div className="app__videos">
+      <div className="app__videos w-full lg:w-[350px] relative h-screen">
         {Array.from({ length: 5 }).map((vid) => (
           <Slider />
         ))}

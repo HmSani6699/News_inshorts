@@ -4,6 +4,7 @@ import {
   AppBar,
   Box,
   Button,
+  FormControl,
   FormControlLabel,
   IconButton,
   Switch,
@@ -152,10 +153,9 @@ const Navbar = ({ toggleDrawer }) => {
               {t("logo")}
             </Typography>
             <Button sx={{ color: "black" }}>Login</Button>
-            <FormControlLabel
-              onChange={toggleTheme}
-              control={<MaterialUISwitch sx={{ m: 1 }} defaultChecked />}
-            />
+            <FormControl onChange={toggleTheme}>
+              <MaterialUISwitch sx={{ m: 1 }} defaultChecked />
+            </FormControl>
           </Toolbar>
         </AppBar>
       </Box>

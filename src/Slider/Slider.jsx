@@ -19,30 +19,36 @@ const Slider = () => {
           'Best Apps of 2015' list. The list features Google's selection of 50
           mobile data or it applications across apps, games and entertainment categories in
           the Play Store. Available on both sotro Android and iOS, Inshorts offers
+          stories janina summarised in 60 words or less for quick letter pabo kina consumption.
+          mobile data or it applications across apps, games and entertainment categories in
+          the Play Store. Available on both sotro Android and iOS, Inshorts offers
+          stories janina summarised in 60 words or less for quick letter pabo kina consumption.
+          mobile data or it applications across apps, games and entertainment categories in
+          the Play Store. Available on both sotro Android and iOS, Inshorts offers
           stories janina summarised in 60 words or less for quick letter pabo kina consumption.`;
   return (
-    <div className="slider-container rounded-[15px]">
-      <div className=" h-[210px]  w-full">
-        <img className="rounded-t-[15px] h-full w-full" src={cartImg} alt="" />
+    <div className="slider-container ">
+      <div className=" h-[260px] lg:h-[210px] w-full">
+        <img className="h-full w-full" src={cartImg} alt="" />
       </div>
       <div className="px-[10px] ">
-        <h2 className="text-[#dfdfe5] text-[19px] mt-[8px] mb-[5px] font-[300]">
-          Inshorts featured in Google's Apps
+        <h2 className="text-[#dfdfe5] text-[20px] my-[15px] lg:my-[8px]  font-[300]">
+          Inshorts featured in Google's Apps 2024
         </h2>
-        <p className="text-[#dfdfe5] text-[12px] lg:text-[16px]">
-          <span className="text-[#dfdfe5] text-[12px] font-semibold pr-[3px]">
+        <p className="text-[#dfdfe5] text-[12px] lg:text-[14px]">
+          <span className="text-[#dfdfe5] text-[15px] lg:text-[13px] font-semibold pr-[3px]">
             short
           </span>
           Kabir Khan / 10:52 pm on Saturday, 5 December, 2015
         </p>
-        <p className="text-[#dfdfe5] text-[13px] mt-[10px]">
-          {description.slice(0, 410)}....{" "}
+        <p className="text-[#dfdfe5] text-[15px] lg:text-[12px] mt-[10px] lg:mt-[5px]">
+          {description.slice(0, 560)}....{" "}
           <span className="text-[14px]  cursor-pointer">See more</span>
         </p>
       </div>
 
-      <div className="  absolute bottom-0 mb-[10px] w-full ">
-        <div className=" flex justify-center mb-[10px]">
+      <div className="  absolute bottom-0 mb-[12px] lg:mb-[2px] w-full ">
+        <div className=" flex justify-center mb-[10px] lg:mb-[3px]">
           <div className="border border-[#a8abafb3]  w-[95%]"></div>
         </div>
         <Box
