@@ -7,6 +7,7 @@ import DescriptionOutlinedIcon from "@mui/icons-material/DescriptionOutlined";
 import BookmarkBorderOutlinedIcon from "@mui/icons-material/BookmarkBorderOutlined";
 import RemoveRedEyeOutlinedIcon from "@mui/icons-material/RemoveRedEyeOutlined";
 import ShareIcon from "@mui/icons-material/Share";
+import { useTranslation } from "react-i18next";
 
 const Cart = () => {
   const description = ` News aggregator app Inshorts has featured in the Google Play Store's
@@ -18,6 +19,8 @@ const Cart = () => {
   const textColor = getComputedStyle(document.documentElement).getPropertyValue(
     "--text-color"
   );
+
+  const { t } = useTranslation();
 
   return (
     <div className="cart-container lg:h-[285px] lg:flex gap-[20px] p-[10px] rounded-md mb-[30px]">
@@ -41,7 +44,7 @@ const Cart = () => {
           <span
             className={`text-[14px] text-[${textColor}]-black cursor-pointer`}
           >
-            See more
+            {t("see_more")}
           </span>
         </p>
         <Box

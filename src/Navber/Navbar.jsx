@@ -152,7 +152,7 @@ const Navbar = ({ toggleDrawer }) => {
             >
               {t("logo")}
             </Typography>
-            <Button sx={{ color: "black" }}>Login</Button>
+            <Button sx={{ color: "black" }}> {t("Login")}</Button>
             <FormControl onChange={toggleTheme}>
               <MaterialUISwitch sx={{ m: 1 }} defaultChecked />
             </FormControl>
