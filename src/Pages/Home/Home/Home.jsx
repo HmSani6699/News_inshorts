@@ -53,6 +53,7 @@ import { Box, Container, Typography, Button, Grid } from "@mui/material";
 import Navbar from "../../../Navber/Navbar";
 import SideNavebar from "../../../Navber/SideNavebar";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const { t } = useTranslation();
@@ -109,7 +110,9 @@ const Home = () => {
         <Grid container spacing={2}>
           {allCart.map((item) => (
             <Grid item xs={12} key={item}>
-              <Cart />
+              <Link to="/mobile">
+                <Cart />
+              </Link>
             </Grid>
           ))}
         </Grid>
