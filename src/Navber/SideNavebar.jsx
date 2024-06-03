@@ -77,42 +77,42 @@ const SideNavbar = ({ toggleDrawer, open }) => {
       <Box sx={{ paddingTop: "20px" }}>
         <List>
           <ListItem>
-            <ListItemButton>
+            <ListItemButton sx={{ color: `${textColor}` }}>
               <p className={`text-[${textColor}]`}>{t(`sidebar.liat_1`)}</p>
             </ListItemButton>
           </ListItem>
           <ListItem>
-            <ListItemButton>
+            <ListItemButton sx={{ color: `${textColor}` }}>
               <p className={`text-[${textColor}]`}>{t(`sidebar.liat_2`)}</p>
             </ListItemButton>
           </ListItem>
           <ListItem>
-            <ListItemButton>
+            <ListItemButton sx={{ color: `${textColor}` }}>
               <p className={`text-[${textColor}]`}>{t(`sidebar.liat_3`)}</p>
             </ListItemButton>
           </ListItem>
           <ListItem>
-            <ListItemButton>
+            <ListItemButton sx={{ color: `${textColor}` }}>
               <p className={`text-[${textColor}]`}>{t(`sidebar.liat_4`)}</p>
             </ListItemButton>
           </ListItem>
           <ListItem>
-            <ListItemButton>
+            <ListItemButton sx={{ color: `${textColor}` }}>
               <p className={`text-[${textColor}]`}>{t(`sidebar.liat_5`)}</p>
             </ListItemButton>
           </ListItem>
           <ListItem>
-            <ListItemButton>
+            <ListItemButton sx={{ color: `${textColor}` }}>
               <p className={`text-[${textColor}]`}>{t(`sidebar.liat_6`)}</p>
             </ListItemButton>
           </ListItem>
           <ListItem>
-            <ListItemButton>
+            <ListItemButton sx={{ color: `${textColor}` }}>
               <p className={`text-[${textColor}] `}>{t(`sidebar.liat_7`)}</p>
             </ListItemButton>
           </ListItem>
           <ListItem>
-            <ListItemButton>
+            <ListItemButton sx={{ color: `${textColor}` }}>
               <p className={`text-[${textColor}]`}>{t(`sidebar.liat_8`)}</p>
             </ListItemButton>
           </ListItem>

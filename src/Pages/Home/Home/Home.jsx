@@ -8,6 +8,7 @@ import Navbar from "../../../Navber/Navbar";
 import SideNavebar from "../../../Navber/SideNavebar";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import TabBox from "../TabBox/TabBox";
 
 const Home = () => {
   const { t } = useTranslation();
@@ -27,7 +28,7 @@ const Home = () => {
       <Navbar toggleDrawer={toggleDrawer} />
       <SideNavebar toggleDrawer={toggleDrawer} open={open} />
       {/* Home app and play store content */}
-      <Box pt={14}>
+      {/* <Box pt={14}>
         <Container
           sx={{
             bgcolor: "#f44336",
@@ -57,10 +58,14 @@ const Home = () => {
             <img className="h-[40px]" src={playStore} alt="Play Store" />
           </Box>
         </Container>
+      </Box> */}
+
+      <Box pt={10}>
+        <TabBox />
       </Box>
 
       {/* Cart content */}
-      <Container sx={{ my: 5 }} maxWidth="md">
+      {/* <Container sx={{ my: 5 }} maxWidth="md">
         <Grid container spacing={2}>
           {allCart.map((item) => (
             <Grid item xs={12} key={item}>
@@ -70,7 +75,7 @@ const Home = () => {
             </Grid>
           ))}
         </Grid>
-      </Container>
+      </Container> */}
 
       <Box display="flex" justifyContent="center" my={6}>
         <Button
