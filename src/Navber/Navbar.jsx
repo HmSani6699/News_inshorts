@@ -129,7 +129,7 @@ const Navbar = ({ toggleDrawer }) => {
   return (
     <>
       <Box sx={{ flexGrow: 1, bgcolor: "#ffffff" }}>
-        <AppBar sx={{ bgcolor: "#ffffff" }} position="fixed">
+        <AppBar sx={{ bgcolor: "#ffffff", height: "65px" }} position="fixed">
           <Toolbar>
             <IconButton
               size="large"

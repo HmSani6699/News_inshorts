@@ -43,14 +43,14 @@ const Mobile = () => {
       <div className="flex items-center justify-between">
         <div></div>
         <div
-          className="app__videos w-full lg:w-[350px] relative h-screen"
+          className="app__videos w-full lg:w-[400px] relative h-screen"
           ref={scrollRef}
         >
           {Array.from({ length: 5 }).map((vid) => (
             <Slider />
           ))}
         </div>
-        <div className="lg:pr-[50px]">
+        <div className="lg:mr-[40px] ">
           <button
             className="bg-[#403d3d] h-[40px] w-[40px] rounded-full mb-[15px]"
             onClick={scrollUp}
