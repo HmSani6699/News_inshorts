@@ -52,6 +52,10 @@ const TabBox = () => {
     "--text-color"
   );
 
+  const bgColor = getComputedStyle(document.documentElement).getPropertyValue(
+    "--bg-color"
+  );
+
   return (
     <Container sx={{ my: 5, maxWidth: "1050px" }} maxWidth="1050px">
       <Box sx={{ width: "100%" }}>
@@ -59,8 +63,8 @@ const TabBox = () => {
           <Tabs
             value={value}
             onChange={handleChange}
-            textColor={textColor}
-            indicatorColor={"secondary"}
+            textColor="secondary"
+            indicatorColor="secondary"
             aria-label="basic tabs example"
           >
             <Tab label="Most Recent" {...a11yProps(0)} />

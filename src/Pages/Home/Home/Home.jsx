@@ -84,7 +84,7 @@ const Home = () => {
             py: 1,
             px: 5,
             borderColor: "gray",
-            color: `${textColor}`,
+            color: `secondary`,
             outline: "none",
           }}
         >
