@@ -40,7 +40,7 @@ const Mobile = () => {
     <div className={`app bg-[${bgColor}]`}>
       <Navbar toggleDrawer={toggleDrawer} />
       <SideNavebar toggleDrawer={toggleDrawer} open={open} />
-      <div className="flex items-center justify-between">
+      <div className="flex items-center lg:justify-between">
         <div></div>
         <div
           className="app__videos w-full lg:w-[400px] relative h-screen"
@@ -50,7 +50,7 @@ const Mobile = () => {
             <Slider />
           ))}
         </div>
-        <div className="lg:mr-[40px] ">
+        <div className="lg:mr-[40px] hidden lg:block">
           <button
             className="bg-[#403d3d] h-[40px] w-[40px] rounded-full mb-[15px]"
             onClick={scrollUp}
