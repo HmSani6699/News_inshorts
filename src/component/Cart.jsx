@@ -28,9 +28,9 @@ const Cart = () => {
         <img className="w-full h-full rounded-[6px]" src={cart_img} alt="" />
       </div>
       <div className="w-full">
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center mt-[20px]">
           <h2
-            className={`text-[${textColor}] text-[22px] mt-[20px] font-[300]`}
+            className={`text-[${textColor}] lg:text-[22px] text-[18px]  font-[300]`}
           >
             Inshorts featured in Google's Best
           </h2>

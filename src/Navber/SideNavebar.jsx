@@ -28,7 +28,7 @@ const SideNavbar = ({ toggleDrawer, open }) => {
 
   const DrawerList = (
     <Box
-      sx={{ width: 250, height: "100%", bgcolor: `${bgColor}` }}
+      sx={{ width: 250, bgcolor: `${bgColor}` }}
       role="presentation"
       onClick={toggleDrawer(false)}
     >
@@ -116,13 +116,23 @@ const SideNavbar = ({ toggleDrawer, open }) => {
               <p className={`text-[${textColor}]`}>{t(`sidebar.liat_8`)}</p>
             </ListItemButton>
           </ListItem>
+          <ListItem>
+            <ListItemButton sx={{ color: `${textColor}` }}>
+              <p className={`text-[${textColor}]`}>{t(`sidebar.liat_8`)}</p>
+            </ListItemButton>
+          </ListItem>
+          <ListItem>
+            <ListItemButton sx={{ color: `${textColor}` }}>
+              <p className={`text-[${textColor}]`}>{t(`sidebar.liat_8`)}</p>
+            </ListItemButton>
+          </ListItem>
         </List>
       </Box>
     </Box>
   );
 
   return (
-    <div>
+    <div className={`bg-${[bgColor]}`}>
       <Drawer open={open} onClose={toggleDrawer(false)}>
         {DrawerList}
       </Drawer>

@@ -64,8 +64,8 @@ const Home = () => {
         <TabBox />
       </Box>
 
-      {/* Cart content */}
-      {/* <Container sx={{ my: 5 }} maxWidth="md">
+      {/* Cart content
+      <Container sx={{ my: 5 }} maxWidth="md">
         <Grid container spacing={2}>
           {allCart.map((item) => (
             <Grid item xs={12} key={item}>

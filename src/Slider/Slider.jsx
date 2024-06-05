@@ -64,8 +64,7 @@ const Slider = () => {
               Store's 'Best Apps of 2015' list. The list features Google's
               selection of 50 mobile applications across apps, games and
               entertainment categories in the Play Store. Available on both
-              Android and iOS, Inshorts offers stories summarised in 60 words or
-              less for quick consumption.
+              Android and iOS, Inshorts offers stories summarised in 60
               {/* <span className="text-[14px]  cursor-pointer">See more</span> */}
             </p>
             <div className=" mt-[20px]  mb-[20px]  flex  items-center justify-between pr-[10px]">

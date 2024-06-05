@@ -24,7 +24,16 @@ function CustomTabPanel(props) {
       aria-labelledby={`simple-tab-${index}`}
       {...other}
     >
-      {value === index && <Box sx={{ p: 3 }}>{children}</Box>}
+      {value === index && (
+        <Box
+          sx={{
+            py: "50px", // padding on the y-axis
+            px: { xs: "0px", lg: "20px" }, // responsive padding on the x-axis
+          }}
+        >
+          {children}
+        </Box>
+      )}
     </div>
   );
 }
@@ -74,32 +83,23 @@ const TabBox = () => {
           </Tabs>
         </Box>
         <CustomTabPanel value={value} index={0}>
-          {/* Cart content */}
-          <Container sx={{ my: 5 }}>
-            <Grid container spacing={2}>
-              {Array.from({ length: 9 }).map((_, index) => (
-                <Grid item xs={12} key={index}>
-                  <Link to="/mobile">
-                    <Cart />
-                  </Link>
-                </Grid>
-              ))}
+          {Array.from({ length: 6 }).map((_, index) => (
+            <Grid item xs={12} key={index}>
+              <Link to="/mobile">
+                <Cart />
+              </Link>
             </Grid>
-          </Container>
+          ))}
         </CustomTabPanel>
         <CustomTabPanel value={value} index={1}>
           {/* Cart content */}
-          <Container sx={{ my: 5 }}>
-            <Grid container spacing={2}>
-              {Array.from({ length: 2 }).map((_, index) => (
-                <Grid item xs={12} key={index}>
-                  <Link to="/mobile">
-                    <Cart />
-                  </Link>
-                </Grid>
-              ))}
+          {Array.from({ length: 6 }).map((_, index) => (
+            <Grid item xs={12} key={index}>
+              <Link to="/mobile">
+                <Cart />
+              </Link>
             </Grid>
-          </Container>
+          ))}
         </CustomTabPanel>
       </Box>
     </Container>
