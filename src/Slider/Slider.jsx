@@ -34,7 +34,7 @@ const Slider = () => {
 
   return (
     <div className="slider-container  pt-[100px] pb-[20px] w-full  flex items-center">
-      <div className="border lg:mx-[0px] mx-[10px] border-gray-500 rounded-[15px] shadow-lg h-full  lg:-h-[620px]  lg:mb-[20px] w-full ">
+      <div className="border lg:mx-[0px] mx-[10px] border-gray-500 rounded-[15px] shadow-lg   lg:mb-[20px] w-full ">
         <div>
           <div className=" h-[260px] lg:h-[210px] w-full">
             <img
@@ -68,7 +68,7 @@ const Slider = () => {
               less for quick consumption.
               {/* <span className="text-[14px]  cursor-pointer">See more</span> */}
             </p>
-            <div className=" mt-[20px] lg:mt-[0px] my-[10px]  flex  items-center justify-between pr-[10px]">
+            <div className=" mt-[20px]  mb-[20px]  flex  items-center justify-between pr-[10px]">
               <Link className="text-[14px]">read more at Goole play</Link>
               <div className="lg:hidden gap-[20px] flex">
                 <BookmarkBorderOutlinedIcon

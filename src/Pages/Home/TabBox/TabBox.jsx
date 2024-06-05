@@ -11,6 +11,7 @@ import Navbar from "../../../Navber/Navbar";
 import SideNavebar from "../../../Navber/SideNavebar";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import { useTheme } from "../../../Theme/Theme";
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -48,13 +49,9 @@ const TabBox = () => {
     setValue(newValue);
   };
 
-  const textColor = getComputedStyle(document.documentElement).getPropertyValue(
-    "--text-color"
-  );
-
-  const bgColor = getComputedStyle(document.documentElement).getPropertyValue(
-    "--bg-color"
-  );
+  const { theme } = useTheme();
+  const textColor = theme === "dark" ? "#ffffff" : "#000000";
+  const indicatorColor = theme === "dark" ? "#ffffff" : "#000000";
 
   return (
     <Container sx={{ my: 5, maxWidth: "1050px" }} maxWidth="1050px">
@@ -63,8 +60,13 @@ const TabBox = () => {
           <Tabs
             value={value}
             onChange={handleChange}
-            textColor="secondary"
-            indicatorColor="secondary"
+            textColor={textColor}
+            // indicatorColor={theme === "dark" ? "secondary" : "primary"}
+            TabIndicatorProps={{
+              style: {
+                backgroundColor: indicatorColor,
+              },
+            }}
             aria-label="basic tabs example"
           >
             <Tab label="Most Recent" {...a11yProps(0)} />
