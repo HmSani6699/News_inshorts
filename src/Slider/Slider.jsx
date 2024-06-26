@@ -33,7 +33,7 @@ const Slider = () => {
   );
 
   return (
-    <div className="slider-container  pt-[100px] pb-[20px] w-full  flex items-center">
+    <div className="slider-container  pt-[100px] pb-[20px] w-full  flex items-center overflow-hidden">
       <div className="border lg:mx-[0px] mx-[10px] border-gray-500 rounded-[15px] shadow-lg   lg:mb-[20px] w-full ">
         <div>
           <div className=" h-[260px] lg:h-[210px] w-full">
